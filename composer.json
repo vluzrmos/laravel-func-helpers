@@ -1,5 +1,5 @@
 {
-    "name": "vluzrmos/funchelpers",
+    "name": "vluzrmos/func-helpers",
     "description": "Funções helpers para Laravel.",
     "keywords": ["laravel", "laravel-helpers"],
     "license": "GNU-GPL 3.0",
@@ -16,5 +16,6 @@
         "files": [
             "src/FuncHelpers/helpers.php"
         ]
-    }
+    },
+    "minimum-stability": "dev"
 }
