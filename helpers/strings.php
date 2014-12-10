@@ -37,3 +37,44 @@ function class_dotcase($className){
 
   return implode('.', $namespaced);
 }
+
+/**
+ * Cria tags &lt;a&gt; para os hiperlinks na string
+ * @param $str string contendo hiperlinks
+ * @param array $attrs attributos que devem ser adicionados às tags &lt;a&gt;
+ * @return mixed
+ */
+function str_autolink($str, $attrs = []){
+  $attrs = array_merge([
+    "target" => "_blank",
+  ], $attrs);
+
+  return preg_replace("~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~","<a href=\"\\0\" ".HTML::attributes($attrs).">\\0</a>", $str);
+}
+
+/**
+ * Verifica se uma dada string é um email
+ * @param $str String contendo um email
+ * @return bool
+ */
+function is_email($str){
+  return filter_var($str, FILTER_VALIDATE_EMAIL) !== false;
+}
+
+/**
+ * Encripta uma string com uma dada key
+ * @param $str
+ * @return string
+ */
+function encrypt($str) {
+  return Crypt::encrypt($str);
+}
+
+/**
+ * Decripta uma string
+ * @param $str
+ * @return string
+ */
+function decrypt($str) {
+  return Crypt::decrypt($str);
+}
