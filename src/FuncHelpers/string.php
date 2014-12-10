@@ -1,7 +1,5 @@
 <?php
 
-<?php
-
 /**
  * Alias to Lang::get
  * @return String [description]
