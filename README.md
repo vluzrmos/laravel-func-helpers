@@ -11,17 +11,20 @@ Basta adicionar no seu compose.json:
 }
 </pre>
 
-e depois atualizar seu composer <code>composer update vluzrmos/func-helpers</code>, 
-todas as funções serão carregadas.
+e depois atualizar seu composer <code>composer update vluzrmos/func-helpers</code>.
 
 Exemplo
-=======
+--------
+
+#### Carregando todos os helpers de uma vez
+
 ```php
-FuncHelpers\load_all_helpers(); //carrega todos os arquivos de helpers
+FuncHelpers\load_all_helpers(); //carrega todos os helpers de uma vez
 ```
 
-```php
+### String Helpers
 
+```php
 FuncHelpers\load_helper("string");
 
 t("reminders.password") /* Alias para Lang::get() */
@@ -36,6 +39,8 @@ is_email("vluzrmos@gmail.com"); /* Verifica que a string dada é um email válid
 
 encrypt($str) e decrypt($encryptedStr); /* Encripta e decripta uma string (alias para Crypt::encrypt e Crypt::decrypt */
 ```
+
+### Array Helpers
 
 ```php
 FuncHelpers\load_helper("array");
@@ -57,6 +62,8 @@ array_combine_values_assoc($keys, $names, $last_names);
 ];
 
 ``` 
+
+### HTTP helpers
 
 ```php
 FuncHelpers\load_helper("http");
