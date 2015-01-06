@@ -16,8 +16,14 @@ todas as funções serão carregadas.
 
 Exemplo
 =======
+```php
+FuncHelpers\load_all_helpers(); //carrega todos os arquivos de helpers
+```
 
 ```php
+
+FuncHelpers\load_helper("string");
+
 t("reminders.password") /* Alias para Lang::get() */
 
 str_words("lorem ipsum sit at doem", 3, "..."); /* Limita a string dada à 3 palavras (alias para Str::words)*/
@@ -29,7 +35,10 @@ str_autolink("Visite meu github https://github.com/vluzrmos", ["target"=>"_blank
 is_email("vluzrmos@gmail.com"); /* Verifica que a string dada é um email válido*/
 
 encrypt($str) e decrypt($encryptedStr); /* Encripta e decripta uma string (alias para Crypt::encrypt e Crypt::decrypt */
+```
 
+```php
+FuncHelpers\load_helper("array");
 
 /*
   Combinando arrays unidimensionais
@@ -48,4 +57,18 @@ array_combine_values_assoc($keys, $names, $last_names);
 ];
 
 ``` 
+
+```php
+FuncHelpers\load_helper("http");
+
+//Suponha que tenhamos um formulario e que este fora enviado para a action no controller e agora vamos tentar salvar
+if(!$model->save()){ //supondo que a validação falhe
+  Session:flash("Houve um erro ao salvar os dados do formulario.");
+  return redirectBackOrDefault("/user/profile/edit"); //redireciona o usuário 
+  }
+else{
+  Session::flash("Alterações salvas com sucesso!");
+  return Redirect::to("user/profile/edit");
+}
+```
 
