@@ -1,6 +1,8 @@
 Laravel FuncHelpers
 ====================
 
+[![Latest Stable Version](https://poser.pugx.org/vluzrmos/func-helpers/v/stable.svg)](https://packagist.org/packages/vluzrmos/func-helpers) [![Total Downloads](https://poser.pugx.org/vluzrmos/func-helpers/downloads.svg)](https://packagist.org/packages/vluzrmos/func-helpers) [![Latest Unstable Version](https://poser.pugx.org/vluzrmos/func-helpers/v/unstable.svg)](https://packagist.org/packages/vluzrmos/func-helpers) [![License](https://poser.pugx.org/vluzrmos/func-helpers/license.svg)](https://packagist.org/packages/vluzrmos/func-helpers)
+
 Funções helpers para projetos Laravel.
 
 Basta adicionar no seu compose.json:
