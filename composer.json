@@ -14,7 +14,7 @@
     },
     "autoload": {
         "files": [
-            "src/FuncHelpers/Helpers.php"
+            "src/FuncHelpers/helpers.php"
         ]
     },
     "minimum-stability": "dev"
